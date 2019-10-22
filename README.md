@@ -25,7 +25,7 @@ There is no definite defination for Sensitive APIs. Sensitive API's are the API'
 
 In this tool the Sensitive API's are the set of APIs which are used to access ```Sensitive Resources``` on the Android Device. Sensitive Resources such as Devce ID of the Application, Location of the user, getting the information about Network Type.
 
-There are 10 API classes used as Sensitive API category. All these API classes will have different API methods which are used to detect the malicious behaviour in an Application.
+There are 10 API classes used as Sensitive API classes. All these API classes will have different API methods which are used to detect the malicious behaviour in an Application.
 
 E.g.-
 - Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V

@@ -22,7 +22,7 @@ There is no definite defination for Sensitive APIs. Sensitive API's are the API'
 
 In this tool the Sensitive API's are the set of APIs which are used to access ```Sensitive Resources``` on the Android Device. Sensitive Resources such as Devce ID of the Application, Location of the user, getting the information about Network Type.
 
-There are around 20 API classes which comes under Sensitive API category. All these API classes will have different API metods which are used to detected the malicious behaviour in an Application.
+There are around 10 API classes which comes under Sensitive API category. All these API classes will have different API metods which are used to detected the malicious behaviour in an Application.
 
 E.g.-
 - Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V
@@ -32,30 +32,13 @@ E.g.-
     
 In the above examples ```TelephonyManager, ConnectivityManager, PackageManager``` are the API classes and ```listen(), getNetworkType(), getActiveNetworkInfo(), isSafeMode()``` are the API Methods.
 
+The Tool uses the following Sensitive APIs -
 
-
+![SensitiveAPIList](https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%207.31.00%20PM.png)
 
 <!-- Packages Used -->
 ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f6e6574776f726b782e737667-2.svg)
 ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f7472617669732d63692e6f72672f6e6574776f726b782f6e6574776f726b782e7376673f6272616e63683d6d6173746572.svg) ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f6769746875622f6e6574776f726b782f6e6574776f726b783f6272616e63683d6d6173746572267376673d74727565.svg)
-
-## Why Graphs ?
-Graphs are mathematical structures that represent pairwise relationships between objects. A graph is a flow structure that represents the relationship between various objects. It can be visualized by using the following two basic components:
-
-Nodes: These are the most important components in any graph. Nodes are entities whose relationships are expressed using edges. 
-
-Edges: Edges are the components that are used to represent the relationships between various nodes in a graph. An edge between two nodes expresses a one-way or two-way relationship between the nodes.
-
-<img height=200 align="center" src="https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/200.gif"  hspace="1" vspace="1">
-
-
-### The Android Application graphs are called as ```Callgraph ```. 
-
-### A call graph (also known as a call multigraph) is a control flow graph, which represents calling relationships between API's in an Android Application. 
-
-Each node represents an API and each edge (a, b) indicates that API a calls API b. Call graphs can be dynamic or static. A dynamic call graph is a record of an execution of the Android Application. Thus, a dynamic call graph can be exact, but only describes one run of the application. A static call graph is a call graph intended to represent every possible execution of the Android Application.
-
-Call graphs can be defined to represent varying degrees of precision. A more precise call graph more precisely approximates the behavior of the real Android Application, at the cost of taking longer to compute and more memory to store. The most precise call graph is fully context-sensitive, which means that for each application, the graph contains a separate node for each call stack that application have in it.
 
 ## Working
 Written in python ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f6e6574776f726b782e737667-2.svg). 

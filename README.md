@@ -1,4 +1,5 @@
-# Extracting Sensitive API Calls of Android Malware Applications
+# Extracting Sensitive API Calls in Malware Applications 
+### Android
 
 <!-- Library Logo -->
 <img height=150 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/images.png" align="left" hspace="1" vspace="1">
@@ -43,27 +44,25 @@ The Tool uses the following Sensitive APIs -
 ## Working
 Written in python ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f6e6574776f726b782e737667-2.svg). 
 </br>
-</br>
-<a href='https://networkx.github.io/documentation/stable/' /><img align='left' height='100' src='https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/networkx_logo_1.png' /></a>
-</br>
-The main package used is networkx. This package of python helps to work with graphs. Tap the icon to know more.
-</br>
-</br>
-</br>
-```It's used to classify an Android Application into its Malware Family```. 
-
-<img height=450 src="https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/android-marching-malware.jpg" align="left" hspace="1" vspace="1">
-
-Every family has a characteristics called as ```SENSITIVE API```. These ```Sensitive API's``` set is unique for a Malware Family. Using these a ````Caller-Callee```` relationship is detected and represented as a callgraph (.gml). You can learn more about it in other repository [**Android Application Signature Creator Based on Graphs**](https://github.com/devu-62442/Android_Application_Signature_Creator).
+Every Application ```.apk``` has a characteristics called as ```SENSITIVE API```. These ```Sensitive API's``` set is unique for a Malware Family. 
 
 The tool follows the following steps :-
 
-#### Step #1. Clone and Download the code and the given DATASET folder as github says - ![GitHub](https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/git.svg)
+#### Step #1. Use Androguard to create a callgraph :
+```gradle
+androguard cg 'Application Name'
+```
+<img align='right' height='200' src='https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/Screenshot%202019-10-20%20at%2010.31.34%20PM.png' />
 
-#### Step #2. Use the below command in the command-prompt to run the program ```MalwareFamily_Classifier.py```
+</br>
+A callgraph.gml is created using the above command in the same folder where application is placed.
+
+#### Step #2. Clone and Download the code as github says - ![GitHub](https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/git.svg)
+
+#### Step #3. Use the below command in the command-prompt to run the program ```Sensitive_API.py```
 
 ```gradle
-python3 MalwareFamily_Classifier.py -p [Path of your GML (Callgraph) Application] -g [Name of the GML (Callgraph)] -d [Path where dataset is stored]
+python3 Sensitive_API.py -p [Path of your GML (Callgraph) Application] -g [Name of the GML (Callgraph)]
 ```
 <img height=200 src="https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/Screenshot%202019-10-21%20at%206.33.43%20PM.png" align="center" hspace="1" vspace="1">
 

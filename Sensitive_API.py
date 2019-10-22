@@ -15,10 +15,11 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-#Android Application Graph Signature ASCII Banner
+#Banner
 ascii_banner = pyfiglet.figlet_format("Sensitive \t APIs",width=1000)
 print(ascii_banner)
 
+#options
 parser = optparse.OptionParser()
 
 parser.add_option("-p","--path",dest="path",help="Input the Path of the Graph.")
@@ -40,7 +41,7 @@ arr = [x for x in os.listdir() if x.endswith(options.graph)]
 #Reading the Callgraphs created using androguard tool
 G2 = nx.read_gml(arr[0],label='label') 
 
-#List containing the names of all the sensitive API without their methods. 
+#List containing the names of all the sensitive API classes.
 sensitive_api=['TelephonyManager','SmsManager','LocationManager','AudioManager','HttpURLConnection','ConnectivityManager','BroadcastReceiver','Cipher','AccessibleObject','PackageManager']
 
 sensitive_api_malware=[]

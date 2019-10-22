@@ -1,4 +1,4 @@
-# Extracting Sensitive API Calls in Android Application
+# Extracting Sensitive API Calls of Android Malware Applications
 
 <!-- Library Logo -->
 <img height=150 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/images.png" align="left" hspace="1" vspace="1">
@@ -13,7 +13,27 @@ An ```Application Programming Interface (API)``` is an interface or communicatio
 
 ![Python](https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Architecture.png)
 
+## Application Framework
+Application framework layer is on top of native library layer. The application layer provides major Application programming interface (APIs) and higher-level services in the form of java classes. The application developers are allowed to access all the APIs framework for the core programs that make simpler the reuse of APIs components. These APIs are open to everybody to create android applications. There is different type of application components. Each type has a different lifecycle and purpose that describes how the component will be created and destroyed.
 </br>
+
+## Sensitive API
+There is no definite defination for Sensitive APIs. Sensitive API's are the API's which handles the sensitive information in Android Devices. Now the sensitive information can be personal information rendering, it can be reading of databases, it can be sensing and receiving sms etc. 
+
+In this tool the Sensitive API's are the set of APIs which are used to access ```Sensitive Resources``` on the Android Device. Sensitive Resources such as Devce ID of the Application, Location of the user, getting the information about Network Type.
+
+There are around 20 API classes which comes under Sensitive API category. All these API classes will have different API metods which are used to detected the malicious behaviour in an Application.
+
+E.g.-
+- Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener; I)V
+- Landroid/telephony/TelephonyManager;->getNetworkType()I
+- Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+- Landroid/content/pm/PackageManager;->isSafeMode()Z
+    
+In the above examples ```TelephonyManager, ConnectivityManager, PackageManager``` are the API classes and ```listen(), getNetworkType(), getActiveNetworkInfo(), isSafeMode()``` are the API Methods.
+
+
+
 
 <!-- Packages Used -->
 ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f6e6574776f726b782e737667-2.svg)

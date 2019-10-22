@@ -12,7 +12,7 @@
 An ```Application Programming Interface (API)``` is an interface or communication protocol between a client and a server intended to simplify the building of client-side software. It has been described as a “contract” between the client and the server, such that if the client makes a request in a specific format, it will always get a response in a specific format or initiate a defined action. In building applications, an API simplifies programming by abstracting the underlying implementation and only exposing objects or actions the developer needs. 
 
 
-[**Android**](https://developer.android.com) uses APIs. It is a layered architecture. The APIs lie in the second layer (from the top) called as Application Framework. 
+[**Android**](https://developer.android.com) uses thousands of APIs to add different functionality in the application. It is a layered architecture. The API lies in the second layer (from the top) called as Application Framework layer. 
 
 ![Python](https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Architecture.png)
 

@@ -64,7 +64,7 @@ A callgraph.gml is created using the above command in the same folder where appl
 ```gradle
 python3 Sensitive_API.py -p [Path of your GML (Callgraph) Application] -g [Name of the GML (Callgraph)]
 ```
-<img height=150 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%207.57.54%20PM.png" align="center" hspace="1" vspace="1">
+<img height=150 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%209.07.56%20PM.png" align="center" hspace="1" vspace="1">
 
 #### Step #3. Output
 The code will give you the set of the ```Sensitive APIs``` of that particular Android Malware Application-

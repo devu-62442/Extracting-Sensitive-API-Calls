@@ -69,5 +69,5 @@ python3 Sensitive_API.py -p [Path of your GML (Callgraph) Application] -g [Name 
 #### Step #3. Output
 The code will give you the set of the ```Sensitive APIs``` of that particular Android Malware Application-
 </br>
-<img height=200 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%208.02.33%20PM.png" align="center" hspace="1" vspace="1">
+<img height=400 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%208.02.33%20PM.png" align="center" hspace="1" vspace="1">
 

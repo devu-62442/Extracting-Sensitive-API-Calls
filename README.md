@@ -1,5 +1,5 @@
 # Extracting Sensitive API Calls in Malware Applications 
-### Android
+##### Android
 
 <!-- Library Logo -->
 <img height=150 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/images.png" align="left" hspace="1" vspace="1">
@@ -33,9 +33,11 @@ E.g.-
     
 In the above examples ```TelephonyManager, ConnectivityManager, PackageManager``` are the API classes and ```listen(), getNetworkType(), getActiveNetworkInfo(), isSafeMode()``` are the API Methods.
 
-The Tool uses the following Sensitive APIs -
+The Tool uses the following Sensitive APIs Classes -
 
 ![SensitiveAPIList](https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%207.31.00%20PM.png)
+
+These classes are used to give the list of Sensitive API calls as an output.
 
 <!-- Packages Used -->
 ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f6e6574776f726b782e737667-2.svg)
@@ -44,7 +46,7 @@ The Tool uses the following Sensitive APIs -
 ## Working
 Written in python ![Python](https://github.com/devu-62442/Android_Malware_Signature_Creator/blob/master/img/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f6e6574776f726b782e737667-2.svg). 
 </br>
-Every Application ```.apk``` has a characteristics called as ```SENSITIVE API```. These ```Sensitive API's``` set is unique for a Malware Family. 
+Every Application ```.apk``` is having a set of ```SENSITIVE APIs```.
 
 The tool follows the following steps :-
 
@@ -64,12 +66,10 @@ A callgraph.gml is created using the above command in the same folder where appl
 ```gradle
 python3 Sensitive_API.py -p [Path of your GML (Callgraph) Application] -g [Name of the GML (Callgraph)]
 ```
-<img height=200 src="https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/Screenshot%202019-10-21%20at%206.33.43%20PM.png" align="center" hspace="1" vspace="1">
+<img height=200 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%207.57.54%20PM.png" align="center" hspace="1" vspace="1">
 
 #### Step #3. Output
-The code will give you the name of the family it belongs to or will give you that it is ```UNKNOWN/GOODWARE```
+The code will give you the set of the ```Sensitive APIs``` of that particular Android Malware Application-
 </br>
-<img height=200 src="https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/Screenshot%202019-10-21%20at%206.40.28%20PM.png" align="center" hspace="1" vspace="1">
+<img height=200 src="https://github.com/devu-62442/Extracting-Sensitive-API-Calls/blob/master/img/Screenshot%202019-10-22%20at%208.02.33%20PM.png" align="center" hspace="1" vspace="1">
 
-
-<img height=200 src="https://github.com/devu-62442/Static_Malware_Family_Classifier_based_on_Graph_Comparison/blob/master/img/Screenshot%202019-10-21%20at%206.41.37%20PM.png" align="center" hspace="1" vspace="1">
